@@ -11,10 +11,10 @@ def check_happiness(num: int) -> bool:
     endlessly in a cycle that does not include 1. Those numbers for
     which this process ends in 1 are happy numbers.
     """
-    history = set()
+    history = list()
 
     while num != 1 and num not in history:
-        history.add(num)
+        history.append(num)
         
         # Calculate sum of squares using divmod instead of string conversion
         total_sum = 0
